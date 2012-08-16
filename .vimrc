@@ -17,9 +17,14 @@ hi LineNr ctermfg=gray ctermbg=black
 " tab stuff - 4 spaces, keep indent
 set autoindent
 set smartindent
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
+
+" for file types
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " show matched bracket
 set showmatch
