@@ -1,4 +1,10 @@
-"turn on incremental searching
+" utf-8
+set encoding=utf-8
+
+" make backspace work
+set backspace=indent,eol,start
+
+" turn on incremental searching
 set incsearch
 
 " ignore the quirks of the original vi
