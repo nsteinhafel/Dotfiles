@@ -1,4 +1,7 @@
+window:
+  opacity: 0.92
+
 font:
   normal:
       family: FiraCode
-  size: 8
+  size: 7.5
