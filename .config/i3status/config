@@ -14,6 +14,7 @@ general {
         color_degraded = "#DC322F"
 }
 
+# order += "ipv6"
 order += "cpu_usage"
 order += "memory"
 order += "disk /"
@@ -23,40 +24,40 @@ order += "battery all"
 order += "tztime local"
 
 cpu_usage {
-        format = " <span color='#fff'>C</span> %usage "
+        format = " <span color='#fff'></span> %usage "
 }
 
 memory {
-        format = " <span color='#fff'>R</span> %percentage_used "
+        format = " <span color='#fff'></span> %percentage_used "
         threshold_degraded = "1G"
         format_degraded = " MEMORY < %available "
 }
 
 disk "/" {
         # format = " hdd %avail "
-        format = " <span color='#fff'>D</span> <span color='#586E75'>/</span> %percentage_used "
+        format = " <span color='#fff'></span> <span color='#586E75'>/</span> %percentage_used "
 }
 
 wireless _first_ {
-        format_up = " <span color='#fff'>WAN</span> %ip "
-        format_down = " no WAN "
+        format_up = " <span color='#fff'></span> %ip "
+        format_down = "  "
 }
 
 ethernet _first_ {
-        format_up = " <span color='#fff'>LAN</span> %ip "
-        format_down = " no LAN "
+        format_up = " <span color='#fff'></span> %ip "
+        format_down = "  "
 }
 
 battery all {
         # format = "%status %percentage %remaining %emptytime"
         format = " %status %percentage "
-        format_down = " no battery "
+        format_down = "  "
         last_full_capacity = true
         integer_battery_capacity = true
-        status_chr = "<span color='#2AA198'>UP</span>"
-        status_bat = "<span color='#DC322F'>DN</span>"
+        status_chr = "<span color='#2AA198'></span>"
+        status_bat = "<span color='#DC322F'></span>"
         status_unk = "?"
-        status_full = "!"
+        status_full = ""
         low_threshold = 15
         threshold_type = time
 }
